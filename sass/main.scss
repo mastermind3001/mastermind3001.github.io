@@ -1,0 +1,659 @@
+// adaptive
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$close: 1780px;
+
+
+$color-logo: #ffc468;
+$color-nav: #a46b00;
+$color-titles: #a46b00;
+$color-characteristics: #b99150;
+// and button background
+$color-characteristics-title: #ffaf18;
+// and product title
+$color-button-text: #382400;
+$color-title-products: #bd975c;
+$color-product-desc: #181a1a;
+$color-in-cart: #020303;
+$color-in-form: rgb(203, 168, 110);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Muller-Trial-Regular, sans-serif;
+  font-size: 16px;
+}
+
+
+.header {
+  height: auto;
+  width: 100%;
+
+  padding: 16px 0 14px 0;
+
+
+  box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+
+
+  .heading__primary {
+    width: 62.3%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+
+    &--logo {
+      margin-right: 20.5%;
+      display: flex;
+
+      &-type {
+        font-size: 24px;
+        font-family: Muller-Trial-Black, sans-serif;
+        color: $color-logo;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-top: 5px;
+        margin-left: 8px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+
+      }
+    }
+
+
+    &--nav {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: fit-content;
+      margin-top: 24px;
+
+
+      li:not(:first-child) {
+        margin-left: 52px;
+      }
+
+      li:nth-child(3) {
+        margin-left: 57px;
+      }
+
+      li:nth-child(4) {
+        margin-left: 60px;
+      }
+
+      li {
+
+        a:link, a:visited {
+          font-weight: 500;
+          font-size: 17px;
+          cursor: pointer;
+          color: #a46b00;
+          line-height: 1.2;
+          text-align: left;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+.intro {
+  width: 64%;
+  height: 100%;
+  margin: 123px auto 0;
+  padding-left: 12px;
+
+  position: relative;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--title {
+      letter-spacing: -.9px;
+
+      span {
+        display: block;
+        font-size: 45px;
+        font-family: Muller-Trial-ExtraBold, sans-serif;
+        line-height: 1.222;
+      }
+
+      &-taste {
+        color: $color-titles;
+      }
+
+      &-cheff {
+        color: $color-logo;
+        letter-spacing: -1px;
+      }
+    }
+
+    &--quality {
+      margin-top: 45px;
+      margin-left: 5px;
+      max-width: 694px;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      div {
+        width: 330px;
+        display: flex;
+        flex-direction: row;
+        margin-right: 17px;
+        margin-bottom: 20px;
+
+        div {
+          flex-direction: column;
+        }
+      }
+
+      &-title {
+        color: $color-characteristics-title;
+        text-transform: uppercase;
+      }
+
+      span {
+        color: $color-nav;
+        display: block;
+        letter-spacing: 1.2px;
+        line-height: 1.0;
+      }
+
+      img {
+        height: 60px;
+        margin-right: 16px;
+        margin-top: 4px;
+      }
+
+      &-flavor {
+        margin-top: 5px;
+        margin-left: 1px;
+      }
+
+      &-pizza {
+        width: 200px;
+        margin-top: 5px;
+        margin-left: 1px;
+      }
+
+      &-point {
+        margin-top: 4px;
+      }
+
+      &-recipe {
+        width: 200px;
+        margin-top: 5px;
+        margin-left: -4px;
+      }
+
+
+    }
+
+    &--btn-go {
+
+      color: $color-button-text;
+      text-align: left;
+      margin-top: 8px;
+      margin-left: 2px;
+
+      a:link, a:visited {
+        background: #ffaf18;
+        text-decoration: none;
+        color: #382400;
+        font-weight: bolder;
+        line-height: 3.438;
+        padding: 20px 55px 23px 55px;
+        letter-spacing: -.4px;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+
+  }
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      display: block;
+      margin-top: 56px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.product {
+  width: 62%;;
+  height: 100%;
+  margin: 123px auto 0;
+
+
+  &--title {
+    text-align: center;
+    font-size: 35px;
+    font-family: MullerTrialBold, sans-serif;
+    color: $color-title-products;
+    padding-top: 28px;
+    line-height: 1.571;
+    margin-left: 10px;
+    letter-spacing: -1.1px;
+
+  }
+
+  &__list {
+    margin: 50px auto 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--card:hover {
+      transform: translateY(-4px);
+    }
+
+    &--card {
+      box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+      width: 282px;
+      height: 354px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-bottom: 10px;
+
+      div {
+        margin: 15px auto 0;
+
+        img {
+          height: auto;
+          margin: 0 20px;
+        }
+      }
+
+      &-title {
+        font-size: 18px;
+        font-family: MullerTrialBold, sans-serif;
+        color: $color-button-text;
+        line-height: 3.056;
+        text-align: center;
+        font-weight: bolder;
+      }
+
+      &-description {
+        font-size: 14px;
+        font-family: MullerTrialRegular, sans-serif;
+        color: $color-product-desc;
+        line-height: 1.4;
+        text-align: center;
+        padding: 0 15px;
+      }
+
+      &-add {
+        text-align: center;
+        margin: 10px 20px;
+        background: $color-characteristics-title;
+        width: 242px;
+        height: 55px;
+        border: none;
+        font-size: 16px;
+        font-family: MullerTrialBold, sans-serif;
+        font-weight: bolder;
+        color: $color-in-cart;
+        line-height: 3.438;
+        cursor: pointer;
+      }
+
+      &-add:hover {
+        color: white;
+      }
+    }
+  }
+
+}
+
+.footer {
+  width: 62.7%;;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  margin: 175px auto 100px;
+
+  &__info {
+    &--title {
+      font-size: 35px;
+      font-weight: bolder;
+      color: $color-characteristics-title;
+
+      span {
+        display: block;
+        color: $color-nav;
+        margin-top: 5px;
+      }
+    }
+
+    &--warranty {
+      margin-top: 65px;
+      margin-left: 8px;
+      color: #b99150;
+      line-height: 1.5;
+      letter-spacing: .8px;
+      width: 370px;
+    }
+
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+    margin-left: 135px;
+
+    input {
+      margin-bottom: 25px;
+      width: 330px;
+      height: 60px;
+
+      padding: 15px 23px;
+      font-size: 18px;
+      color: $color-in-form;
+      line-height: 2.5;
+      text-align: left;
+      border: 1px solid $color-nav;
+    }
+
+    input::placeholder {
+      color: $color-in-form;
+      opacity: 1; /* Firefox */
+    }
+
+    input::-ms-input-placeholder { /* Edge 12 -18 */
+      color: $color-in-form;
+    }
+
+    input[type="text"], input[type="tel"], textarea, select {
+      outline: none;
+    }
+
+    button {
+      color: $color-in-cart;
+      font-weight: bolder;
+      padding: 20px 80px;
+      background: $color-characteristics-title;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      color: white;
+    }
+  }
+
+  &__pizza {
+    position: absolute;
+    right: -140px;
+    top: -60px;
+  }
+}
+
+
+@media screen and (max-width: $xl) {
+  .header {
+
+    .heading__primary {
+      width: 75%;
+      justify-content: space-around;
+
+      &__text--title span {
+        font-size: 37px;
+        line-height: 1.2;
+      }
+
+      &--logo {
+        margin-right: 10%;
+      }
+    }
+  }
+
+  .intro {
+    width: 75%;
+    margin: 85px auto 0;
+    padding: 0;
+
+    &__text--quality {
+      margin-top: 20px;
+
+      div {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__picture img {
+      display: none;
+    }
+
+    &__text--btn-go {
+      margin: 0 0 0 10px;
+    }
+
+  }
+
+  .product {
+    width: 100%;
+    margin: 50px auto 0;
+
+    &__list {
+      justify-content: space-evenly;
+    }
+  }
+
+  .footer {
+    width: 75%;
+    margin: 75px auto 50px;
+
+    &__info {
+      width: 50%;
+    }
+
+    &__info--title {
+      font-size: 30px;
+    }
+
+    &__info--warranty {
+      margin: 35px 0 0 0;
+      width: 100%;
+    }
+
+    &__pizza {
+      display: none;
+    }
+
+    &__form {
+      margin: 10px 0 0 50px;
+
+      input {
+        width: 100%;
+        height: 57px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: $sm) {
+
+  .header {
+    padding: 16px 20px 14px 20px;
+
+    .heading__primary {
+      width: 100%;
+      justify-content: space-around;
+      flex-direction: column;
+
+      &--nav {
+        flex-direction: column;
+        margin: 10px 0 0 10px;
+
+        li:not(:first-child) {
+          margin: 0;
+        }
+
+        li {
+          a:visited, a:link {
+
+            font-size: 14px;
+          }
+        }
+
+        li:nth-child(3) {
+          margin: 0;
+        }
+      }
+
+      &__text--title span {
+        font-size: 37px;
+        line-height: 1.2;
+      }
+
+      &--logo {
+        margin-right: 10%;
+      }
+
+    }
+  }
+
+  .intro {
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 0 10px 0 20px;
+
+    &__text {
+      &--title {
+        span {
+          font-size: 30px;
+          display: inline;
+        }
+      }
+
+      &--quality {
+        margin-top: 20px;
+
+        &-title {
+          font-size: 15px;
+        }
+
+        div {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__picture img {
+      display: none;
+    }
+
+    &__text--btn-go {
+      margin: 0 0 0 10px;
+    }
+
+  }
+
+  .product {
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 10px;
+
+    &--title {
+      font-size: 25px;
+    }
+
+    &__list {
+      margin: 20px 0 0 0;
+      justify-content: space-evenly;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    padding: 10px 14px;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0 0 0;
+
+    &__info {
+      width: 100%;
+    }
+
+    &__info--title {
+      font-size: 30px;
+    }
+
+    &__info--warranty {
+      margin: 5px 0 0 0;
+      width: 100%;
+    }
+
+    &__pizza {
+      display: none;
+    }
+
+    &__form {
+      margin: 10px 0 20px 0;
+
+      input {
+        width: 100%;
+        height: 57px;
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: $close) {
+
+  .intro {
+
+    &__picture img {
+      display: none;
+    }
+
+  }
+
+
+  .footer {
+
+
+    &__pizza {
+      display: none;
+    }
+
+  }
+
+}
