@@ -1,4 +1,5 @@
-const init = () => {
+const init = ($event) => {
+    $event.preventDefault();
     let name = document.getElementById('name');
     let address = document.getElementById('address');
     let phone = document.getElementById('phone');
